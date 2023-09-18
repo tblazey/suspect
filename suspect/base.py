@@ -247,7 +247,7 @@ class ImageBase(np.ndarray):
         # mgrid produces 3D index grids for the x, y and z coords separately
         II, JJ, KK = np.mgrid[0:shape[2],
                               0:shape[1],
-                              0:shape[0]].astype(np.float)
+                              0:shape[0]].astype(np.float64)
         # shift the indices from the corner to the centre
         II -= (shape[2] - 1) / 2
         JJ -= (shape[1] - 1) / 2
